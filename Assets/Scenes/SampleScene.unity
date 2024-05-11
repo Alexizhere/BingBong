@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 136402775}
   - component: {fileID: 136402774}
+  - component: {fileID: 136402776}
   m_Layer: 0
   m_Name: Top_Wall
   m_TagString: Untagged
@@ -200,6 +201,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136402776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136402773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ac9e0217fef4d4ba2b9ce5cbacd1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceStrength: 15
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +318,8 @@ GameObject:
   - component: {fileID: 622395225}
   - component: {fileID: 622395227}
   - component: {fileID: 622395228}
+  - component: {fileID: 622395229}
+  - component: {fileID: 622395230}
   m_Layer: 0
   m_Name: Player_Paddle
   m_TagString: Untagged
@@ -450,6 +466,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &622395229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622395224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e5ca41c51069843a5c448af3007a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &622395230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622395224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ac9e0217fef4d4ba2b9ce5cbacd1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceStrength: 20
 --- !u!1 &628712354
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +504,7 @@ GameObject:
   - component: {fileID: 628712357}
   - component: {fileID: 628712356}
   - component: {fileID: 628712355}
+  - component: {fileID: 628712359}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -608,6 +651,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &628712359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628712354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73016be4de64a5c43b92ea27aead8d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 200
+--- !u!1 &779685870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779685872}
+  - component: {fileID: 779685871}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &779685871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779685870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed80a174b0f05d44f8e23af93bd1f125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 0}
+--- !u!4 &779685872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779685870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1067275694
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1067275696}
   - component: {fileID: 1067275695}
+  - component: {fileID: 1067275697}
   m_Layer: 0
   m_Name: 'Bottom_Wall '
   m_TagString: Untagged
@@ -685,6 +787,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1067275697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067275694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ac9e0217fef4d4ba2b9ce5cbacd1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceStrength: 15
 --- !u!1 &1325346454
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +948,8 @@ GameObject:
   - component: {fileID: 1449466230}
   - component: {fileID: 1449466229}
   - component: {fileID: 1449466228}
+  - component: {fileID: 1449466232}
+  - component: {fileID: 1449466233}
   m_Layer: 0
   m_Name: 'CPU_Paddle '
   m_TagString: Untagged
@@ -979,6 +1096,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1449466232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449466227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682afd429db5637469085048bfe8aae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  ball: {fileID: 628712356}
+--- !u!114 &1449466233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449466227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ac9e0217fef4d4ba2b9ce5cbacd1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceStrength: 20
 --- !u!1 &1746459876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,3 +1290,4 @@ SceneRoots:
   - {fileID: 1746459878}
   - {fileID: 1903558121}
   - {fileID: 1325346456}
+  - {fileID: 779685872}
